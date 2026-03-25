@@ -28,20 +28,16 @@ jobs:
           cd brief-site
           npm run build
 
-      - name: Configure git
-        run: |
-          git config --global user.email "91305696+Yutao-Zhou@users.noreply.github.com"
-          git config --global user.name "Yutao Zhou"
-
       - name: Deploy to gh-pages
         run: |
           cd brief-site
-          # Remove old gh-pages branch reference if exists
-          git branch -D gh-pages 2>/dev/null || true
-          git checkout --orphan gh-pages
-          git rm -rf . 2>/dev/null || true
-          cp -r dist/* .
+          # Initialize a new orphan branch gh-pages in a fresh temporary repo
+          cd dist
+          git init
+          git checkout -b gh-pages
           git add -A
+          git config user.email "91305696+Yutao-Zhou@users.noreply.github.com"
+          git config user.name "Yutao Zhou"
           git commit -m "feat: deploy financial-insights site $(date -u '+%Y-%m-%d %H:%M:%S')"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Yutao-Zhou/financial-insights.git
           git push -f origin gh-pages
-          git checkout main
