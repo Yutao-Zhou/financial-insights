@@ -4,11 +4,6 @@ on:
   push:
     branches: [ main ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -24,21 +19,18 @@ jobs:
       - name: Install dependencies
         run: |
           cd brief-site
-          npm install --legacy-peer-deps
+          npm ci
 
       - name: Build
         run: |
           cd brief-site
           npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './brief-site/dist'
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/action-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./brief-site/dist
+          branch: gh-pages
+          force_orphan: false
+          commit_message: "feat: deploy financial-insights site"
