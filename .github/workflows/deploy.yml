@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,11 +28,20 @@ jobs:
           cd brief-site
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/action-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./brief-site/dist
-          branch: gh-pages
-          force_orphan: false
-          commit_message: "feat: deploy financial-insights site"
+      - name: Configure git
+        run: |
+          git config --global user.email "91305696+Yutao-Zhou@users.noreply.github.com"
+          git config --global user.name "Yutao Zhou"
+
+      - name: Deploy to gh-pages
+        run: |
+          cd brief-site
+          # Remove old gh-pages branch reference if exists
+          git branch -D gh-pages 2>/dev/null || true
+          git checkout --orphan gh-pages
+          git rm -rf . 2>/dev/null || true
+          cp -r dist/* .
+          git add -A
+          git commit -m "feat: deploy financial-insights site $(date -u '+%Y-%m-%d %H:%M:%S')"
+          git push -f origin gh-pages
+          git checkout main
