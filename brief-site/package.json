@@ -2,6 +2,7 @@
   "name": "financial-insights",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Yutao-Zhou.github.io/financial-insights",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

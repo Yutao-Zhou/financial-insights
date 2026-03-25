@@ -7,7 +7,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/data/briefs.json')
+    fetch('./data/briefs.json')
       .then(r => r.ok ? r.json() : Promise.reject(r.statusText))
       .then(data => setBriefs(Array.isArray(data) ? data : []))
       .catch(err => setError(err))
