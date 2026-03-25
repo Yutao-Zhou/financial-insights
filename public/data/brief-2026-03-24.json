@@ -1,0 +1,45 @@
+{
+  "date": "2026-03-24",
+  "overview": "Today's pre-market main storyline is clear: Middle East tensions lift oil prices, raise inflation and rate expectations, and tech/growth are most sensitive to 'higher for longer' rates. The market performance reflects that: Dow more resilient, Nasdaq weaker. If one sentence: Energy steals the show, rates apply pressure, AI/software chain starts to give back valuations.",
+  "headlines": [
+    {
+      "title": "Middle East tensions boost oil, energy shock reins in market sentiment",
+      "why": "Brent crude up ~+2.9% to around $102.8; Iran conflict and Strait of Hormuz risks repeatedly highlighted. Once oil reclaims triple digits, the market immediately translates it into second-round inflation, affecting Fed path, long-end rates, and growth valuations.",
+      "bullish": "Energy stocks, oil services, upstream resources, some defensive cash-flow assets.",
+      "bearish": "Airlines, cruises, transportation, discretionary, high-valuation tech."
+    },
+    {
+      "title": "10Y Treasury yield rises to ~4.40%, market reprices 'higher/longer'",
+      "why": "US 10Y yield ~4.40%, intraday +6.4bp; conflict prolongation brings 2026 rate-hike/tighter credit conditions back into discussion. Rates directly decide market style — value/energy/Dow components relatively stable, longer-duration tech/growth more fragile.",
+      "bullish": "Bank net interest margin logic, insurance, some value stocks.",
+      "bearish": "Software, semiconductors, high-valuation AI narrative stocks, long-duration assets."
+    },
+    {
+      "title": "Tech/AI trade松动, software and high-beta AI chain under pressure",
+      "why": "MarketWatch/Barron’s pre-market: 'AI jitters return', software weak; Super Micro (SMCI) target cut; movers include Tesla, ServiceNow, Gartner. This is not a single-company story; it signals AI trade shifting from 'narrative-only' back to 'valuation + rates + delivery'.",
+      "bullish": "Real profit delivery, less crazy mega-cap platform names, defensive cash cows.",
+      "bearish": "High-beta AI concepts, server chain with high expectations, high-PS software."
+    },
+    {
+      "title": "Market not in full panic but 'sector rotation' is obvious",
+      "why": "Reuters snapshot: Dow ~+0.14%, S&P ~-0.09%, Nasdaq ~-0.49%. MarketWatch similarly: Dow -0.16%, S&P -0.34%, Nasdaq -0.75%. This indicates not pure risk-off but sector rotation. Money hasn't left entirely; it's moving from growth to energy/defense/value.",
+      "bullish": "Dow heavyweights, traditional value, energy, defense sectors.",
+      "bearish": "Nasdaq, high-valuation growth, small-cap high-beta."
+    },
+    {
+      "title": "Wall Street views diverge: some raise S&P target but near-term risks remain",
+      "why": "CNBC/MarketWatch note that despite Middle East and credit risks, some big banks raised S&P targets. This shows medium-term funds haven't abandoned the bull framework, but short-term trading focuses more on geopolitics, oil, and rates.",
+      "bullish": "If oil falls and yields stabilize, risk-on can resume quickly.",
+      "bearish": "If conflict escalates, current 'style rotation' may upgrade to broader pullback."
+    }
+  ],
+  "sectors": {
+    "AI / Semiconductor": "Weak today. Core issue not AI logic collapse but rate hikes hit the most expensive AI narrative stocks first. Expect bounce if 10Y falls. Focus on real earnings names.",
+    "Big Tech": "Same logic as AI. Not a company-specific event but macro discount rate issue. When rates stay high, big tech survives on earnings quality; smaller names weaker.",
+    "Energy": "Still most direct beneficiary. Watch out: if US/allies really stabilize oil, energy may see 'good news sold'.",
+    "EV": "Weak. Not EV-specific but risk-off environment + high rates. Although high oil price theoretically benefits EV demand, market usually front-runs macro pressure, not long-term demand improvement.",
+    "US Market": "Currently macro-headline driven, not bottom-up stock picking. S&P/Nasdaq short-term moves will be led by: Middle East news, oil prices, Treasury yields, Friday derivatives expiry."
+  },
+  "preMarket": "Key numbers to watch: 1) Brent crude (watch for renewed spike); 2) 10Y Treasury yield (direct pressure on AI/growth); 3) US dollar (strength hurts gold and risk assets); 4) Futures recovery sustainability.",
+  "verdict": "Cautious tone. Not an immediate crash but not suitable for aggressive buying. Expect energy to hold up; growth to watch rates; broad indices high volatility without clean direction. Wait for Middle East de-escalation signals, oil stabilization, and yields to stop climbing before considering stronger risk-on."
+}
