@@ -1,21 +1,21 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect } from 'react'
+import './App.css'
 
 function App() {
-  const [briefs, setBriefs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [briefs, setBriefs] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('./data/briefs.json')
+    fetch('/data/briefs.json')
       .then(r => r.ok ? r.json() : Promise.reject(r.statusText))
       .then(data => setBriefs(Array.isArray(data) ? data : []))
       .catch(err => setError(err))
-      .finally(() => setLoading(false));
-  }, []);
+      .finally(() => setLoading(false))
+  }, [])
 
-  if (loading) return <div className="App"><div className="loading">Loading...</div></div>;
-  if (error) return <div className="App"><div className="error">Failed to load data ({error})</div></div>;
+  if (loading) return <div className="App"><div className="loading">Loading...</div></div>
+  if (error) return <div className="App"><div className="error">Failed to load data ({error})</div></div>
 
   return (
     <div className="App">
@@ -62,7 +62,7 @@ function App() {
       ))}
       <div className="footer">Built automatically • Data updates daily around 7am PT</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
