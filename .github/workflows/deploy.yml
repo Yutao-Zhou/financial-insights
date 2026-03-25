@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd brief-site
-          npm ci
+          npm install --legacy-peer-deps
 
       - name: Build
         run: |
